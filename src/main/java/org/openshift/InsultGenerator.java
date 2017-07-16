@@ -34,8 +34,10 @@ public class InsultGenerator {
                 connection.close();
             }
         } catch (Exception e) {
-            System.out.println(e.getStackTrace());
+
+            System.out.println(e.getCause());
             return "Database connection problem!" + e.getMessage();
+
         }
         return theInsult;
     }
